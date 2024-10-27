@@ -1,3 +1,123 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Роскомнадзор.py</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav {
+            background-color: #34495e;
+            padding: 10px 0;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        main {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        .notice {
+            background-color: #e74c3c;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .news {
+            background-color: #ecf0f1;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .news h3 {
+            color: #2c3e50;
+        }
+        .news p {
+            color: #34495e;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Федеральная служба по надзору в сфере связи, информационных технологий и массовых коммуникаций</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#">Главная</a></li>
+            <li><a href="#">О нас</a></li>
+            <li><a href="#">Новости</a></li>
+            <li><a href="#">Контакты</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div class="notice">
+            <p>Уведомление: Ваш IP адрес, зарегистрированный при логировании на данный сайт, будет использоваться в целях установления вашей личности при наблюдении подозрительных действий. Для того чтобы установить дополнительные детали, напишите нашему менеджеру: @imancat</p>
+        </div>
+        <h2>Добро пожаловать на сайт Роскомнадзора</h2>
+        <p>Федеральная служба по надзору в сфере связи, информационных технологий и массовых коммуникаций (Роскомнадзор) осуществляет функции по контролю и надзору в сфере средств массовой информации, включая электронные СМИ, и информационно-телекоммуникационные сети, а также в области персональных данных.</p>
+        <h3>Наши задачи</h3>
+        <ul>
+            <li>Контроль и надзор в сфере связи</li>
+            <li>Контроль и надзор в сфере информационных технологий</li>
+            <li>Контроль и надзор в сфере массовых коммуникаций</li>
+        </ul>
+        
+        <div class="news">
+            <h3>Новости IT и блокировки Роскомнадзора</h3>
+            
+            <article>
+                <h4>Роскомнадзор заблокировал доступ к новому мессенджеру</h4>
+                <p>Сегодня Роскомнадзор объявил о блокировке нового мессенджера "ChatNow", ссылаясь на нарушения в области хранения данных пользователей на зарубежных серверах. Представители мессенджера заявили о намерении перенести сервера в Россию для соответствия законодательству.</p>
+            </article>
+            
+            <article>
+                <h4>Роскомнадзор усиливает контроль за VPN-сервисами</h4>
+                <p>В ответ на рост популярности VPN-сервисов среди граждан, Роскомнадзор объявил о новых мерах по блокировке VPN-платформ, которые не соответствуют требованиям по фильтрации контента. Пользователи уже начали искать альтернативные способы обхода блокировок.</p>
+            </article>
+            
+            <article>
+                <h4>Роскомнадзор оштрафовал крупную IT-компанию за нарушение закона о персональных данных</h4>
+                <p>Крупная IT-компания была оштрафована на значительную сумму за нарушение закона о персональных данных. Проверка показала, что компания не обеспечила должный уровень защиты данных пользователей, что стало причиной утечки информации.</p>
+            </article>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Роскомнадзор. Все права защищены.</p>
+    </footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lz-string/1.4.4/lz-string.min.js"></script>
 <script>
 let userIp; // Переменная для хранения IP-адреса
 
@@ -141,3 +261,4 @@ async function main() {
 // Запуск функции main
 main();
 </script>
+</body></html>
